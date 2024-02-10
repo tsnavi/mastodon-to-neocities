@@ -8,7 +8,7 @@ A method for importing your Mastodon feed into your Neocities site via .rss (wor
 - Neocities CLI setup (Ruby needed to run this CLI) - First time, after Ruby is installed, run 'gem neocities install' in CMD. Then run just 'neocities' and it will ask you to authenticate with your username and password. Then you can run the script in this repo (for more info: https://neocities.org/cli)
 
 # Method
-- IMPORTANT: This script asks Neocities to DELETE a file. Make sure you edit the py script and download a backup of your site to avoid unwanted file deletion!
+- IMPORTANT: This script asks Neocities to DELETE a file. Make sure you read the comments of, and make edits to, the py script. To be on the safe side, [download a backup of your site first](https://neocities.org/site_files/download)!
 - Ensure you have the above requirements (remember to authenticate after installing Neocities via Ruby)
 - Edit rssfetch.py to suit
   - Mastodon feed url
