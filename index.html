@@ -1,0 +1,46 @@
+<body>
+    <table>
+        <tbody id="rss-feed">
+            <!-- RSS feed items will be inserted here dynamically -->
+        </tbody>
+    </table>
+
+    <script>
+        // URL of your RSS feed file
+        var rssFeedUrl = 'mastodon_feed.rss';
+
+        // Optional, gets rid of the the +0000 from pubDate
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleString();
+        }
+
+        // Function to fetch and parse RSS feed
+        function fetchAndParseRSSFeed(url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(xml => {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(xml, 'text/xml');
+                    // Extract items from the XML
+                    const items = xmlDoc.querySelectorAll('item');
+                    // Display the feed items on the page
+                    const feedContainer = document.getElementById('rss-feed');                    
+                    items.forEach(item => {
+                        // Note, I'm only taking pubDate and description here because that's all I want from my Mastodon Feed - you'll need to add your own for more complex feeds
+                        const pubDate = formatDate(item.querySelector('pubDate').textContent); // Format date
+                        const description = item.querySelector('description').textContent;
+
+                        // Create table rows to display feed items
+                        const row = document.createElement('tr');
+                        row.innerHTML = `<td>${pubDate}</td><td>${description}</td>`; // If you want more than pubDate and description, add it here
+                        feedContainer.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Error fetching RSS feed:', error));
+        }
+
+        // Call the function with the URL of the RSS feed
+        fetchAndParseRSSFeed(rssFeedUrl);
+    </script>
+</body>
