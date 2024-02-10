@@ -5,7 +5,7 @@ A method for importing your Mastodon feed into your Neocities site via .rss (wor
 - [Neocities Account](https://neocities.org/)
 - Mastodon Feed (your mastodon URL plus .rss appended eg: https://indieweb.social/@tsxyz.rss)
 - Ruby installed https://www.ruby-lang.org/en/downloads/
-- Neocities CLI setup (Ruby needed to run this CLI) - First time, after Ruby is installed, run 'gem neocities install' in CMD - it will ask you to authenticate with your username and password. Then you can run the script in this repo (https://neocities.org/cli)
+- Neocities CLI setup (Ruby needed to run this CLI) - First time, after Ruby is installed, run 'gem neocities install' in CMD. Then run just 'neocities' and it will ask you to authenticate with your username and password. Then you can run the script in this repo (for more info: https://neocities.org/cli)
 
 # Method
 - Ensure you have the above requirements (remember to authenticate after installing Neocities via Ruby)
