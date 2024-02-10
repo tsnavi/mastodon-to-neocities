@@ -2,9 +2,9 @@
 A method for importing your Mastodon feed into your Neocities site via .rss (workaround for Neocities' CSP restricting direct linking to external .rss)
 
 # Why?
-Mastodon is a great method for microblogging. Since I'm using my website to document my experiences with web development, I felt that importing my toots, where I would post about my website changes, would be a suitable way of [documenting my processes](https://indieweb.org/documentation) - less formal, and more frequent.
-However, free-tier Neocities understandably doesn't allow a lot of external resources to be called, so to display a Mastodon feed on your page you need to first download it and upload it to your site. That is a pain in the arse to do manually each time you toot.
-This tool automates that process, and also shows you how to display the .rss in your html (using javascript to parse rss into html elements of your choosing)
+- Mastodon is a great method for microblogging. Since I'm using my website to document my experiences with web development, I felt that importing my toots, where I would post about my website changes, would be a suitable way of [documenting my processes](https://indieweb.org/documentation) - less formal, and more frequent.
+- However, free-tier Neocities understandably doesn't allow a lot of external resources to be called, so to display a Mastodon feed on your page you need to first download it and upload it to your site. That is a pain in the arse to do manually each time you toot.
+- This tool automates that process, and also shows you how to display the .rss in your html (using javascript to parse rss into html elements of your choosing)
 
 # Requirements
 - [Neocities Account](https://neocities.org/)
