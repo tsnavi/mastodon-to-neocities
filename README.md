@@ -15,7 +15,7 @@ A method for importing your Mastodon feed into your Neocities site via .rss (wor
   - local .rss filename
   - Location of current feed for deletion
   - Upload destination in your Neocities folders
-- Setup your html to parse the .rss feed (see index.html or https://tsxyz.neocities.org/micro)
+- Setup your html to parse the .rss feed (see index.html, https://github.com/tsnavi/js-rss-reader or for a live example https://tsxyz.neocities.org/micro)
 - Run rssfetch.py
 - If successful, schedule rssfetch.py to run in Task Scheduler
 
